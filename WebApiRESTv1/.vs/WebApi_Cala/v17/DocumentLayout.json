@@ -1,0 +1,49 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|c:\\users\\romer\\documents\\fernando\\bisit\\api_calahua\\api\\webapi_cala\\webapirestv1\\controllers\\pricecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|solutionrelative:controllers\\pricecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 360,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PriceController.cs",
+              "DocumentMoniker": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Controllers\\PriceController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PriceController.cs",
+              "ToolTip": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Controllers\\PriceController.cs",
+              "RelativeToolTip": "Controllers\\PriceController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T17:35:46.37Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

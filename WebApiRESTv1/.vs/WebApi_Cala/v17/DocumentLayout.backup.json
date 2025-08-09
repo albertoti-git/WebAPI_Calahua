@@ -1,0 +1,293 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|c:\\users\\romer\\documents\\fernando\\bisit\\api_calahua\\api\\webapi_cala\\webapirestv1\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|solutionrelative:controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|c:\\users\\romer\\documents\\fernando\\bisit\\api_calahua\\api\\webapi_cala\\webapirestv1\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|solutionrelative:controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|c:\\users\\romer\\documents\\fernando\\bisit\\api_calahua\\api\\webapi_cala\\webapirestv1\\repositories\\price\\pricerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|solutionrelative:repositories\\price\\pricerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|c:\\users\\romer\\documents\\fernando\\bisit\\api_calahua\\api\\webapi_cala\\webapirestv1\\repositories\\price\\ipricerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|solutionrelative:repositories\\price\\ipricerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|c:\\users\\romer\\documents\\fernando\\bisit\\api_calahua\\api\\webapi_cala\\webapirestv1\\repositories\\order\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|solutionrelative:repositories\\order\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|c:\\users\\romer\\documents\\fernando\\bisit\\api_calahua\\api\\webapi_cala\\webapirestv1\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|solutionrelative:controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|c:\\users\\romer\\documents\\fernando\\bisit\\api_calahua\\api\\webapi_cala\\webapirestv1\\controllers\\pricecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|solutionrelative:controllers\\pricecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|c:\\users\\romer\\documents\\fernando\\bisit\\api_calahua\\api\\webapi_cala\\webapirestv1\\repositories\\order\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|solutionrelative:repositories\\order\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|c:\\users\\romer\\documents\\fernando\\bisit\\api_calahua\\api\\webapi_cala\\webapirestv1\\controllers\\invoicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|solutionrelative:controllers\\invoicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|c:\\users\\romer\\documents\\fernando\\bisit\\api_calahua\\api\\webapi_cala\\webapirestv1\\app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|solutionrelative:app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|c:\\users\\romer\\documents\\fernando\\bisit\\api_calahua\\api\\webapi_cala\\webapirestv1\\dependencyinjection\\simpleresolver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|solutionrelative:dependencyinjection\\simpleresolver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|c:\\users\\romer\\documents\\fernando\\bisit\\api_calahua\\api\\webapi_cala\\webapirestv1\\repositories\\invoice\\invoicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|solutionrelative:repositories\\invoice\\invoicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|c:\\users\\romer\\documents\\fernando\\bisit\\api_calahua\\api\\webapi_cala\\webapirestv1\\repositories\\invoice\\iinvoicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|solutionrelative:repositories\\invoice\\iinvoicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|c:\\users\\romer\\documents\\fernando\\bisit\\api_calahua\\api\\webapi_cala\\webapirestv1\\repositories\\quotation\\quoterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|solutionrelative:repositories\\quotation\\quoterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|c:\\users\\romer\\documents\\fernando\\bisit\\api_calahua\\api\\webapi_cala\\webapirestv1\\controllers\\quotationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|solutionrelative:controllers\\quotationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 360,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IPriceRepository.cs",
+              "DocumentMoniker": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Repositories\\Price\\IPriceRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Price\\IPriceRepository.cs",
+              "ToolTip": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Repositories\\Price\\IPriceRepository.cs",
+              "RelativeToolTip": "Repositories\\Price\\IPriceRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T07:51:36.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PriceController.cs",
+              "DocumentMoniker": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Controllers\\PriceController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PriceController.cs",
+              "ToolTip": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Controllers\\PriceController.cs",
+              "RelativeToolTip": "Controllers\\PriceController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T07:50:42.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "WebApiConfig.cs",
+              "DocumentMoniker": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\App_Start\\WebApiConfig.cs",
+              "RelativeDocumentMoniker": "App_Start\\WebApiConfig.cs",
+              "ToolTip": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\App_Start\\WebApiConfig.cs",
+              "RelativeToolTip": "App_Start\\WebApiConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T07:42:52.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SimpleResolver.cs",
+              "DocumentMoniker": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\DependencyInjection\\SimpleResolver.cs",
+              "RelativeDocumentMoniker": "DependencyInjection\\SimpleResolver.cs",
+              "ToolTip": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\DependencyInjection\\SimpleResolver.cs",
+              "RelativeToolTip": "DependencyInjection\\SimpleResolver.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwDsAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T07:41:48.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "InvoiceController.cs",
+              "DocumentMoniker": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Controllers\\InvoiceController.cs",
+              "RelativeDocumentMoniker": "Controllers\\InvoiceController.cs",
+              "ToolTip": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Controllers\\InvoiceController.cs",
+              "RelativeToolTip": "Controllers\\InvoiceController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T07:35:35.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "QuoteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Repositories\\Quotation\\QuoteRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Quotation\\QuoteRepository.cs",
+              "ToolTip": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Repositories\\Quotation\\QuoteRepository.cs",
+              "RelativeToolTip": "Repositories\\Quotation\\QuoteRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T07:23:21.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "QuotationController.cs",
+              "DocumentMoniker": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Controllers\\QuotationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\QuotationController.cs",
+              "ToolTip": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Controllers\\QuotationController.cs",
+              "RelativeToolTip": "Controllers\\QuotationController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAEgBAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T07:21:31.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ContactController.cs",
+              "DocumentMoniker": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Controllers\\ContactController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ContactController.cs",
+              "ToolTip": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Controllers\\ContactController.cs",
+              "RelativeToolTip": "Controllers\\ContactController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T07:20:12.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IInvoiceRepository.cs",
+              "DocumentMoniker": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Repositories\\Invoice\\IInvoiceRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Invoice\\IInvoiceRepository.cs",
+              "ToolTip": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Repositories\\Invoice\\IInvoiceRepository.cs",
+              "RelativeToolTip": "Repositories\\Invoice\\IInvoiceRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T07:36:09.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "InvoiceRepository.cs",
+              "DocumentMoniker": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Repositories\\Invoice\\InvoiceRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Invoice\\InvoiceRepository.cs",
+              "ToolTip": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Repositories\\Invoice\\InvoiceRepository.cs",
+              "RelativeToolTip": "Repositories\\Invoice\\InvoiceRepository.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAwHEAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T07:36:24.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PriceRepository.cs",
+              "DocumentMoniker": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Repositories\\Price\\PriceRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Price\\PriceRepository.cs",
+              "ToolTip": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Repositories\\Price\\PriceRepository.cs",
+              "RelativeToolTip": "Repositories\\Price\\PriceRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T06:33:31.505Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 430,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IOrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Repositories\\Order\\IOrderRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Order\\IOrderRepository.cs",
+              "ToolTip": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Repositories\\Order\\IOrderRepository.cs",
+              "RelativeToolTip": "Repositories\\Order\\IOrderRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T06:10:00.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Repositories\\Order\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Order\\OrderRepository.cs",
+              "ToolTip": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Repositories\\Order\\OrderRepository.cs",
+              "RelativeToolTip": "Repositories\\Order\\OrderRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T04:30:57.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "Controllers\\OrderController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T04:25:13.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ItemsController.cs",
+              "DocumentMoniker": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Controllers\\ItemsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ItemsController.cs",
+              "ToolTip": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Controllers\\ItemsController.cs",
+              "RelativeToolTip": "Controllers\\ItemsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T22:14:42.156Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
