@@ -22,6 +22,8 @@ namespace WebApiRESTv1.Controllers
     {
         string strConection = ConfigurationManager.AppSettings.Get("bdcon");
 
+
+		[HttpGet]
         [Route("BusinessPartners")]
 		//	public IHttpActionResult GetSocios(PageParameter pageParameter)
 		public IHttpActionResult GetSocios(int PageNumber, int PageSize)
@@ -254,37 +256,11 @@ namespace WebApiRESTv1.Controllers
 		
 		}
 
-
-		public HttpResponseMessage post(BusinessPartner bp)
+		[HttpPost]
+        [Route("BusinessPartners")]
+        public HttpResponseMessage post([FromBody] BusinessPartner bp)
         {
-            string str_sp = ConfigurationManager.AppSettings.Get("spPOSTBusinessPartener");
-
-			//string SQL = string.Format("{0}, '{1}','{2}',{3},'{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}',{12},{13},{14},'{15}',{16},'{17}',{18},'{19}','{20}',{21},'{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}',{33},{34},{35},{36},'{37}','{38}',{39},'{40}','{41}','{42}','{43}',{44},'{45}','{46}',", str_sp,
-			//    bp.CardCode,bp.CardType,bp.CardName,bp.GroupCode,bp.Address,bp.ZipCode,bp.MailAddress,bp.MailZipCode,
-			//    bp.Phone1,bp.Phone2,bp.Fax,bp.ContactPerson,bp.PayTermsGrpCode,bp.CreditLimit,bp.DiscountPercent,bp.FederalTaxID,
-			//    bp.PriceListNum,bp.FreeText,bp.SalesPersonCode,bp.Currency,bp.Cellular,bp.AvarageLate,bp.City,bp.County,
-			//    bp.Country,bp.MailCity,bp.MailCounty,bp.MailCountry,bp.EmailAddress,bp.Picture,bp.AdditionalID,bp.FatherCard,
-			//    bp.CardForeignName,bp.CurrentAccountBalance,bp.OpenDeliveryNotesBalance,bp.OpenOrdersBalance,bp.Valid,bp.ValidFrom.ToString("yyyyMMdd"),
-			//    bp.ValidTo.ToString("yyyyMMdd"),bp.Frozen,bp.FrozenFrom.ToString("yyyyMMdd"),bp.FrozenTo.ToString("yyyyMMdd"),bp.Block,bp.ProjectCode,bp.Series,
-			//    bp.GlobalLocationNumber,bp.UnifiedFederalTaxID, bp.UsoCFDI);
-
-			//using (SqlConnection connection = new SqlConnection(strConection))
-			//{
-			//    SqlCommand cmd = new SqlCommand();
-			//    connection.Open();
-			//    cmd.CommandText = SQL;
-			//    cmd.CommandType = CommandType.Text;
-			//    cmd.Connection = connection;
-			//    int Bid = Convert.ToInt32(cmd.ExecuteScalar());
-
-			//    string sql2 = string.Format("{0} {1},'{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}',{14},'{15}','{16}','{17}','{18}','{19}','{20}',{21},'{22}','{23}','{24}',",
-			//    "insertacontact_employs ",Bid, bp.ContactEmployees.Address, bp.ContactEmployees.Phone1, bp.ContactEmployees.Phone2, bp.ContactEmployees.MobilePhone, bp.ContactEmployees.Fax, bp.ContactEmployees.E_Mail,
-			//    bp.ContactEmployees.Pager, bp.ContactEmployees.Remarks1, bp.ContactEmployees.Remarks2, bp.ContactEmployees.Password, bp.ContactEmployees.Name, bp.ContactEmployees.InternalCode, bp.ContactEmployees.PlaceOfBirth,
-			//    bp.ContactEmployees.DateOfBirth, bp.ContactEmployees.Profession, bp.ContactEmployees.CardCode, bp.ContactEmployees.Title, bp.ContactEmployees.CityOfBirth, bp.ContactEmployees.Active, bp.ContactEmployees.FirstName, bp.ContactEmployees.MiddleName, bp.ContactEmployees.LastName);
-			//    cmd.CommandText = sql2;
-			//    cmd.ExecuteNonQuery();
-			//}
-
+            
 			ConexionSAP conexionSAP = ConexionSAP.GetInstance;
 			BusinessPartners oSocios = (BusinessPartners)(dynamic)conexionSAP.CompanySBO.GetBusinessObject(BoObjectTypes.oBusinessPartners);
 			Recordset recordset = (Recordset)(dynamic)conexionSAP.CompanySBO.GetBusinessObject(BoObjectTypes.BoRecordset);
@@ -302,50 +278,54 @@ namespace WebApiRESTv1.Controllers
 				oSocios.CardType = BoCardTypes.cCustomer;
 				oSocios.CardForeignName = bp.CardForeignName;
 				oSocios.FederalTaxID = bp.FederalTaxID;
-				if (bp.GroupCode > 0)
-				{
-					oSocios.GroupCode = bp.GroupCode;
-				}
-				else
-				{
-					oSocios.GroupCode = 103;
-				}
+				
+				oSocios.GroupCode = bp.GroupCode;
+								
 				if (bp.PriceListNum > 0)
 				{
 					oSocios.PriceListNum = bp.PriceListNum;
 				}
 				oSocios.CreditLimit = bp.CreditLimit;
-				oSocios.Currency = bp.Currency;
-				oSocios.Phone1 = bp.Phone1;
-				oSocios.Phone2 = bp.Phone2;
-				oSocios.Cellular = bp.Cellular;
+				//oSocios.Currency = bp.Currency;
+				//oSocios.Phone1 = bp.Phone1;
+				//oSocios.Phone2 = bp.Phone2;
+				//oSocios.Cellular = bp.Cellular;
 				oSocios.EmailAddress = bp.EmailAddress;
-				oSocios.AdditionalID = bp.AdditionalID;
-				oSocios.MailAddress = bp.MailAddress;
-				oSocios.Address = bp.Address;
-				oSocios.City = bp.City;
-				oSocios.County = bp.County;
-				oSocios.Country = bp.Country;
-				oSocios.ZipCode = bp.ZipCode;
-				oSocios.Block = bp.Block;
+				//oSocios.AdditionalID = bp.AdditionalID;
+				//oSocios.MailAddress = bp.MailAddress;
+				//oSocios.Address = bp.Address;
+				//oSocios.City = bp.City;
+				//oSocios.County = bp.County;
+				//oSocios.Country = bp.Country;
+				//oSocios.ZipCode = bp.ZipCode;
+				//oSocios.Block = bp.Block;
 				oSocios.UnifiedFederalTaxID = bp.UnifiedFederalTaxID;
 				oSocios.GlobalLocationNumber = bp.GlobalLocationNumber;
-				oSocios.FatherCard = bp.FatherCard;
-				oSocios.MailZipCode = bp.MailZipCode;
-				oSocios.MailCity = bp.MailCity;
-				oSocios.MailCounty = bp.MailCounty;
-				oSocios.MailCountry = bp.MailCountry;
+				//oSocios.FatherCard = bp.FatherCard;
+				//oSocios.MailZipCode = bp.MailZipCode;
+				//oSocios.MailCity = bp.MailCity;
+				//oSocios.MailCounty = bp.MailCounty;
+				//oSocios.MailCountry = bp.MailCountry;
 				oSocios.ProjectCode = bp.ProjectCode;
-				oSocios.Fax = bp.Fax;
-				oSocios.FreeText = oSocios.FreeText;
-				if (bp.UserFields != null && bp.UserFields.Count > 0)
-				{
-					foreach (string sCampo in bp.UserFields.Keys)
-					{
-						oSocios.UserFields.Fields.Item(sCampo).Value = bp.UserFields[sCampo];
-					}
-				}
-				if (bp.Addresses != null && bp.Addresses.Count() > 0)
+				//oSocios.Fax = bp.Fax;
+				oSocios.FreeText = bp.FreeText;
+
+                if (bp.UserFields != null && bp.UserFields.Length > 0)
+                {
+                    foreach (var diccionario in bp.UserFields) // Recorres cada Dictionary<string,string>
+                    {
+                        if (diccionario != null)
+                        {
+                            foreach (var kvp in diccionario) // kvp.Key y kvp.Value
+                            {
+                                oSocios.UserFields.Fields.Item(kvp.Key).Value = kvp.Value;
+                            }
+                        }
+                    }
+                }
+
+
+                if (bp.Addresses != null && bp.Addresses.Count() > 0)
 				{
 					for (int iIndex2 = 0; iIndex2 < oSocios.Addresses.Count; iIndex2++)
 					{
@@ -354,7 +334,8 @@ namespace WebApiRESTv1.Controllers
 							oSocios.Addresses.Add();
 						}
 						BPAddress oDir2 = bp.Addresses[iIndex2];
-						oSocios.Addresses.AddressName = oDir2.AddressName;
+						
+                        oSocios.Addresses.AddressName = oDir2.AddressName;
 						oSocios.Addresses.AddressType = ((!(oDir2.AddressType == "bo_ShipTo")) ? BoAddressType.bo_BillTo : BoAddressType.bo_ShipTo);
 						oSocios.Addresses.Street = oDir2.Street;
 						oSocios.Addresses.Block = oDir2.Block;
@@ -368,7 +349,23 @@ namespace WebApiRESTv1.Controllers
 						oSocios.Addresses.BuildingFloorRoom = oDir2.BuildingFloorRoom;
 						oSocios.Addresses.StreetNo = oDir2.StreetNo;
 						oSocios.Addresses.GlobalLocationNumber = oDir2.GlobalLocationNumber;
-					}
+
+
+                        if (oDir2.UserFields != null && oDir2.UserFields.Length > 0)
+                        {
+                            foreach (var diccionario in oDir2.UserFields) // Recorres cada Dictionary<string,string>
+                            {
+                                if (diccionario != null)
+                                {
+                                    foreach (var kvp in diccionario) // kvp.Key y kvp.Value
+                                    {
+                                        oSocios.Addresses.UserFields.Fields.Item(kvp.Key).Value = kvp.Value;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
 				}
 				if (oSocios.Add() != 0)
 				{
@@ -381,6 +378,7 @@ namespace WebApiRESTv1.Controllers
 				bp = Get_reponse(sCardCode2);
 				return base.Request.CreateResponse(HttpStatusCode.Created, bp);
 			}
+			
 			oSocios.CardName = bp.CardName;
 			oSocios.CardType = ((!(bp.CardType == "cCustomer")) ? BoCardTypes.cSupplier : BoCardTypes.cCustomer);
 			oSocios.CardForeignName = bp.CardForeignName;
@@ -391,37 +389,44 @@ namespace WebApiRESTv1.Controllers
 				oSocios.PriceListNum = bp.PriceListNum;
 			}
 			oSocios.CreditLimit = bp.CreditLimit;
-			oSocios.Currency = bp.Currency;
-			oSocios.Phone1 = bp.Phone1;
-			oSocios.Phone2 = bp.Phone2;
-			oSocios.Cellular = bp.Cellular;
+			//oSocios.Currency = bp.Currency;
+			//oSocios.Phone1 = bp.Phone1;
+			//oSocios.Phone2 = bp.Phone2;
+			//oSocios.Cellular = bp.Cellular;
 			oSocios.EmailAddress = bp.EmailAddress;
-			oSocios.AdditionalID = bp.AdditionalID;
-			oSocios.MailAddress = bp.MailAddress;
-			oSocios.Address = bp.Address;
-			oSocios.City = bp.City;
-			oSocios.County = bp.County;
-			oSocios.Country = bp.Country;
-			oSocios.ZipCode = bp.ZipCode;
-			oSocios.Block = bp.Block;
+			//oSocios.AdditionalID = bp.AdditionalID;
+			//oSocios.MailAddress = bp.MailAddress;
+			//oSocios.Address = bp.Address;
+			//oSocios.City = bp.City;
+			//oSocios.County = bp.County;
+			//oSocios.Country = bp.Country;
+			//oSocios.ZipCode = bp.ZipCode;
+			//oSocios.Block = bp.Block;
 			oSocios.UnifiedFederalTaxID = bp.UnifiedFederalTaxID;
 			oSocios.GlobalLocationNumber = bp.GlobalLocationNumber;
-			oSocios.FatherCard = bp.FatherCard;
-			oSocios.MailZipCode = bp.MailZipCode;
-			oSocios.MailCity = bp.MailCity;
-			oSocios.MailCounty = bp.MailCounty;
-			oSocios.MailCountry = bp.MailCountry;
+			//oSocios.FatherCard = bp.FatherCard;
+			//oSocios.MailZipCode = bp.MailZipCode;
+			//oSocios.MailCity = bp.MailCity;
+			//oSocios.MailCounty = bp.MailCounty;
+			//oSocios.MailCountry = bp.MailCountry;
 			oSocios.ProjectCode = bp.ProjectCode;
-			oSocios.Fax = bp.Fax;
-			oSocios.FreeText = oSocios.FreeText;
-			if (bp.UserFields != null && bp.UserFields.Count > 0)
-			{
-				foreach (string sCampo2 in bp.UserFields.Keys)
-				{
-					oSocios.UserFields.Fields.Item(sCampo2).Value = bp.UserFields[sCampo2];
-				}
-			}
-			if (bp.Addresses != null && bp.Addresses.Count() > 0)
+			//oSocios.Fax = bp.Fax;
+			oSocios.FreeText = bp.FreeText;
+            if (bp.UserFields != null && bp.UserFields.Length > 0)
+            {
+                foreach (var diccionario in bp.UserFields) // Recorres cada Dictionary<string,string>
+                {
+                    if (diccionario != null)
+                    {
+                        foreach (var kvp in diccionario) // kvp.Key y kvp.Value
+                        {
+                            oSocios.UserFields.Fields.Item(kvp.Key).Value = kvp.Value;
+                        }
+                    }
+                }
+            }
+
+            if (bp.Addresses != null && bp.Addresses.Count() > 0)
 			{
 				for (int iIndex3 = 0; iIndex3 < oSocios.Addresses.Count; iIndex3++)
 				{
@@ -444,7 +449,22 @@ namespace WebApiRESTv1.Controllers
 					oSocios.Addresses.BuildingFloorRoom = oDir.BuildingFloorRoom;
 					oSocios.Addresses.StreetNo = oDir.StreetNo;
 					oSocios.Addresses.GlobalLocationNumber = oDir.GlobalLocationNumber;
-				}
+
+                    if (oDir.UserFields != null && oDir.UserFields.Length > 0)
+                    {
+                        foreach (var diccionario in oDir.UserFields) // Recorres cada Dictionary<string,string>
+                        {
+                            if (diccionario != null)
+                            {
+                                foreach (var kvp in diccionario) // kvp.Key y kvp.Value
+                                {
+                                    oSocios.Addresses.UserFields.Fields.Item(kvp.Key).Value = kvp.Value;
+                                }
+                            }
+                        }
+                    }
+
+                }
 			}
 			if (oSocios.Update() != 0)
 			{
@@ -461,7 +481,9 @@ namespace WebApiRESTv1.Controllers
 			//  return Ok();
 		}
 
-		[Route("BusinessPartner")]
+
+        [HttpGet]
+        [Route("BusinessPartner")]
 		public BusinessPartner Get_reponse(string CardCode)
 		{
 			BusinessPartner businessPartner = new BusinessPartner();
@@ -482,35 +504,38 @@ namespace WebApiRESTv1.Controllers
 					businessPartner.CardType = oSocios.CardType.ToString();
 					businessPartner.PriceListNum = oSocios.PriceListNum;
 					businessPartner.CreditLimit = oSocios.CreditLimit;
-					businessPartner.Currency = oSocios.Currency;
+					//businessPartner.Currency = oSocios.Currency;
 					businessPartner.OpenDeliveryNotesBalance = oSocios.OpenDeliveryNotesBalance;
 					businessPartner.OpenOrdersBalance = oSocios.OpenOrdersBalance;
-					businessPartner.Phone1 = oSocios.Phone1;
-					businessPartner.Phone2 = oSocios.Phone2;
-					businessPartner.Cellular = oSocios.Cellular;
+					//businessPartner.Phone1 = oSocios.Phone1;
+					//businessPartner.Phone2 = oSocios.Phone2;
+					//businessPartner.Cellular = oSocios.Cellular;
 					businessPartner.EmailAddress = oSocios.EmailAddress;
-					businessPartner.AdditionalID = oSocios.AdditionalID;
+					//businessPartner.AdditionalID = oSocios.AdditionalID;
 					businessPartner.UsoCFDI = ((dynamic)oSocios.UserFields.Fields.Item("U_B1SYS_MainUsage").Value).ToString();
 					businessPartner.Valid = ((oSocios.Valid == BoYesNoEnum.tYES) ? true : false);
-					businessPartner.MailAddress = oSocios.MailAddress;
-					businessPartner.Address = oSocios.Address;
-					businessPartner.City = oSocios.City;
-					businessPartner.County = oSocios.County;
-					businessPartner.Country = oSocios.Country;
-					businessPartner.ZipCode = oSocios.ZipCode;
+					//businessPartner.MailAddress = oSocios.MailAddress;
+					//businessPartner.Address = oSocios.Address;
+					//businessPartner.City = oSocios.City;
+					//businessPartner.County = oSocios.County;
+					//businessPartner.Country = oSocios.Country;
+					//businessPartner.ZipCode = oSocios.ZipCode;
 					businessPartner.Block = oSocios.Block;
 					businessPartner.UnifiedFederalTaxID = oSocios.UnifiedFederalTaxID;
 					businessPartner.GlobalLocationNumber = oSocios.GlobalLocationNumber;
-					businessPartner.FatherCard = oSocios.FatherCard;
-					businessPartner.MailZipCode = oSocios.MailZipCode;
-					businessPartner.MailCity = oSocios.MailCity;
-					businessPartner.MailCounty = oSocios.MailCounty;
-					businessPartner.MailCountry = oSocios.MailCountry;
+					//businessPartner.FatherCard = oSocios.FatherCard;
+					//businessPartner.MailZipCode = oSocios.MailZipCode;
+					//businessPartner.MailCity = oSocios.MailCity;
+					//businessPartner.MailCounty = oSocios.MailCounty;
+					//businessPartner.MailCountry = oSocios.MailCountry;
 					businessPartner.ProjectCode = oSocios.ProjectCode;
-					businessPartner.Fax = oSocios.Fax;
+					//businessPartner.Fax = oSocios.Fax;
 					businessPartner.FreeText = oSocios.FreeText;
-					businessPartner.UserFields = new Dictionary<string, string>();
-					businessPartner.Addresses = new BPAddress[oSocios.Addresses.Count];
+                    businessPartner.UserFields = new Dictionary<string, string>[]
+{
+    new Dictionary<string, string>()
+};
+                    businessPartner.Addresses = new BPAddress[oSocios.Addresses.Count];
 					for (int iIndex2 = 0; iIndex2 < oSocios.Addresses.Count; iIndex2++)
 					{
 						oSocios.Addresses.SetCurrentLine(iIndex2);

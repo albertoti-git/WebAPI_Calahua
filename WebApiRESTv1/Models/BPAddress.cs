@@ -7,6 +7,7 @@ namespace WebApiRESTv1.Models
 {
     public class BPAddress
     {
+        
         public string AddressName { get; set; }
         public string Street { get; set; }
         public string Block { get; set; }
@@ -21,5 +22,6 @@ namespace WebApiRESTv1.Models
         public string AddressType { get; set; }
         public string StreetNo { get; set; }
         public string GlobalLocationNumber { get; set; }
+        public Dictionary<string, string>[] UserFields { get; set; }
     }
 }

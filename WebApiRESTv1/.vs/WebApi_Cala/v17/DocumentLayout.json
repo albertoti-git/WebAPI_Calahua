@@ -1,10 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\",
+  "WorkspaceRootPath": "C:\\Users\\Administrator\\source\\repos\\WebAPI_Calahua\\WebApiRESTv1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|c:\\users\\romer\\documents\\fernando\\bisit\\api_calahua\\api\\webapi_cala\\webapirestv1\\controllers\\pricecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|solutionrelative:controllers\\pricecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|c:\\users\\administrator\\source\\repos\\webapi_calahua\\webapirestv1\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|solutionrelative:controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|C:\\Users\\Administrator\\source\\repos\\WebAPI_Calahua\\WebApiRESTv1\\models\\incpayments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|solutionrelative:models\\incpayments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|C:\\Users\\Administrator\\source\\repos\\WebAPI_Calahua\\WebApiRESTv1\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|solutionrelative:controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|C:\\Users\\Administrator\\source\\repos\\WebAPI_Calahua\\WebApiRESTv1\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|solutionrelative:global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|C:\\Users\\Administrator\\source\\repos\\WebAPI_Calahua\\WebApiRESTv1\\models\\businesspartner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|solutionrelative:models\\businesspartner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|C:\\Users\\Administrator\\source\\repos\\WebAPI_Calahua\\WebApiRESTv1\\app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|solutionrelative:app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|C:\\Users\\Administrator\\source\\repos\\WebAPI_Calahua\\WebApiRESTv1\\controllers\\businesspartnercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|solutionrelative:controllers\\businesspartnercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|C:\\Users\\Administrator\\source\\repos\\WebAPI_Calahua\\WebApiRESTv1\\models\\conexionsap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B184DBD9-A210-453F-910B-B39C506312C5}|WebApi_Cala.csproj|solutionrelative:models\\conexionsap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,28 +46,112 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:129:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PriceController.cs",
-              "DocumentMoniker": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Controllers\\PriceController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PriceController.cs",
-              "ToolTip": "C:\\Users\\romer\\Documents\\Fernando\\Bisit\\API_Calahua\\API\\WebApi_Cala\\WebApiRESTv1\\Controllers\\PriceController.cs",
-              "RelativeToolTip": "Controllers\\PriceController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "PaymentsController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebAPI_Calahua\\WebApiRESTv1\\Controllers\\PaymentsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PaymentsController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebAPI_Calahua\\WebApiRESTv1\\Controllers\\PaymentsController.cs",
+              "RelativeToolTip": "Controllers\\PaymentsController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAACMAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T17:35:46.37Z",
+              "WhenOpened": "2025-08-23T17:06:38.278Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebAPI_Calahua\\WebApiRESTv1\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebAPI_Calahua\\WebApiRESTv1\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "Controllers\\OrderController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T03:59:19.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Global.asax.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebAPI_Calahua\\WebApiRESTv1\\Global.asax.cs",
+              "RelativeDocumentMoniker": "Global.asax.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebAPI_Calahua\\WebApiRESTv1\\Global.asax.cs",
+              "RelativeToolTip": "Global.asax.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T19:17:11.379Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IncPayments.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebAPI_Calahua\\WebApiRESTv1\\Models\\IncPayments.cs",
+              "RelativeDocumentMoniker": "Models\\IncPayments.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebAPI_Calahua\\WebApiRESTv1\\Models\\IncPayments.cs",
+              "RelativeToolTip": "Models\\IncPayments.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T17:16:37.885Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BusinessPartner.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebAPI_Calahua\\WebApiRESTv1\\Models\\BusinessPartner.cs",
+              "RelativeDocumentMoniker": "Models\\BusinessPartner.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebAPI_Calahua\\WebApiRESTv1\\Models\\BusinessPartner.cs",
+              "RelativeToolTip": "Models\\BusinessPartner.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAA6wCMAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T20:04:34.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BusinessPartnerController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebAPI_Calahua\\WebApiRESTv1\\Controllers\\BusinessPartnerController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BusinessPartnerController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebAPI_Calahua\\WebApiRESTv1\\Controllers\\BusinessPartnerController.cs",
+              "RelativeToolTip": "Controllers\\BusinessPartnerController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAYBAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T18:18:52.675Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ConexionSAP.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebAPI_Calahua\\WebApiRESTv1\\Models\\ConexionSAP.cs",
+              "RelativeDocumentMoniker": "Models\\ConexionSAP.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebAPI_Calahua\\WebApiRESTv1\\Models\\ConexionSAP.cs",
+              "RelativeToolTip": "Models\\ConexionSAP.cs",
+              "ViewState": "AgIAADwAAABAMzMzM/M5wFMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T17:52:19.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WebApiConfig.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebAPI_Calahua\\WebApiRESTv1\\App_Start\\WebApiConfig.cs",
+              "RelativeDocumentMoniker": "App_Start\\WebApiConfig.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebAPI_Calahua\\WebApiRESTv1\\App_Start\\WebApiConfig.cs",
+              "RelativeToolTip": "App_Start\\WebApiConfig.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAC4AAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T17:02:03.38Z"
             }
           ]
         }

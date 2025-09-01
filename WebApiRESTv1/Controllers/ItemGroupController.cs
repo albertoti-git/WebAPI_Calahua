@@ -17,12 +17,16 @@ namespace WebApiRESTv1.Controllers
     public class ItemGroupController : ApiController
     {
         string strConection = ConfigurationManager.AppSettings.Get("bdcon");
-        public IHttpActionResult Get(int Parameter)
+
+        [Route("ItemsGroup")]
+        [HttpGet]
+        public IHttpActionResult Get()
         {
+            dynamic json = null;
             DataTable dt = new DataTable();
             using (SqlConnection connection = new SqlConnection(strConection))
             {
-                String sql = string.Format("Sp_AYB_WebAPI {0}, '{1}'", 1, Parameter);
+                String sql = string.Format("Sp_AYB_WebAPI {0}, '{1}'", 6, "");
                 SqlCommand cmd = new SqlCommand();
                 SqlDataAdapter sqlDA;
                 connection.Open();
@@ -36,40 +40,52 @@ namespace WebApiRESTv1.Controllers
             int ColCount = dt.Columns.Count;
             int RowCount = dt.Rows.Count;
             string ITEMS = string.Empty;
-            ITEMS += "[";
-            for (int j = 0; j < RowCount - 1; j++)
+            if (RowCount > 0)
             {
-                string ITEM = string.Empty;
-                ITEM = "{";
-                string ITEMVALUE = string.Empty;
-                for (int i = 0; i < ColCount - 1; i++)
+                ITEMS += "[";
+                for (int j = 0; j < RowCount; j++)
                 {
-                    string ColName = dt.Columns[i].ColumnName;
-                    ITEMVALUE = dt.Rows[j][i].ToString();
-                    Type tipoDato = dt.Rows[j][i].GetType();
-                    if (tipoDato.Name == "String")
+                    string ITEM = string.Empty;
+                    ITEM = "{";
+                    string ITEMVALUE = string.Empty;
+                    for (int i = 0; i < ColCount - 1; i++)
                     {
-                        ITEM += "\"" + ColName + "\"" + " : " + "\"" + ITEMVALUE + "\"";
-                    }
-                    else
-                    {
-                        ITEM += "\"" + ColName + "\"" + " : " + ITEMVALUE;
-                    }
+                        string ColName = dt.Columns[i].ColumnName;
+                        ITEMVALUE = dt.Rows[j][i].ToString();
+                        Type tipoDato = dt.Rows[j][i].GetType();
+                        if (tipoDato.Name == "String")
+                        {
+                            ITEM += "\"" + ColName + "\"" + " : " + "\"" + ITEMVALUE + "\"";
+                        }
+                        else
+                        {
+                            ITEM += "\"" + ColName + "\"" + " : " + ITEMVALUE;
+                        }
 
-                    ITEM += ",";
+                        ITEM += ",";
+                    }
+                    if (ITEMVALUE.Length > 0)
+                    {
+                        ITEM = ITEM.Substring(0, ITEM.Length - 1);
+                    }
+                    ITEM += "},";
+                    ITEMS += ITEM;
                 }
-                if (ITEMVALUE.Length > 0)
-                {
-                    ITEM = ITEM.Substring(0, ITEM.Length - 1);
-                }
-                ITEM += "},";
-                ITEMS += ITEM;
+                ITEMS = ITEMS.Substring(0, ITEMS.Length - 1);
+                ITEMS += "]";
+
+                json = JsonConvert.DeserializeObject(ITEMS);
+                return Ok(json);
             }
-            ITEMS = ITEMS.Substring(0, ITEMS.Length - 1);
-            ITEMS += "]";
+            else
+            {
+                //json  = "Sin articulos";
 
-            dynamic json = JsonConvert.DeserializeObject(ITEMS);
-            return Ok(json);
+                //  json = JsonConvert.SerializeObject(oItm);
+                ITEMS = "{}";
+                json = JsonConvert.DeserializeObject(ITEMS);
+                return Ok(json);
+            }
         }
     }
 }

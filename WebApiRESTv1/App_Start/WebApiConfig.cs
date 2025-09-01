@@ -43,6 +43,7 @@ namespace WebApiRESTv1
             var priceRepository = new PriceRepository();
             var quoteRepository = new QuoteRepository();
             var invoiceRepository = new InvoiceRepository();
+            var businessPartnersRepository = new BusinessPartner();
             config.DependencyResolver = new SimpleResolver(
                 orderDiApiRepository,
                 orderRepository,
