@@ -18,9 +18,9 @@ namespace WebApiRESTv1.Controllers
 
         [HttpGet]
         [Route("GetContacts")]
-        public async Task<IHttpActionResult> GetContacts([FromUri] string cardCode = null)
+        public async Task<IHttpActionResult> GetContacts([FromUri] string cardCode = null, string Email = null)
         {
-            var result = await _repository.GetContactsAsync(cardCode);
+            var result = await _repository.GetContactsAsync(cardCode, Email);
             return Ok(result);
         }
     }

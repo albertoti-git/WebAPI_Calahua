@@ -37,6 +37,7 @@ namespace WebApiRESTv1.Models
         public string GlobalLocationNumber { get; set; }
         public string UnifiedFederalTaxID { get; set; }
         public string UsoCFDI { get; set; }
+        public string CompanyPrivate { get; set; }
         public ContactEmployees[] ContactEmployees { get; set; }
         // public UserFields UserFields { get; set; }
        public BPAddress[] Addresses { get; set; }

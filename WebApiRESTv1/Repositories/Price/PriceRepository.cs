@@ -46,7 +46,7 @@ namespace WebApiRESTv1.Repositories.Price
                                 CardName = reader["CardName"].ToString(),
                                 ListNum = reader["ListNum"].ToString(),
                                 ItemCode = reader["ItemCode"].ToString(),
-                                Price = reader["Price"].ToString()
+                                Price = Convert.ToDouble( reader["Price"].ToString())
                             };
 
                             prices.Add(contact);
@@ -59,6 +59,7 @@ namespace WebApiRESTv1.Repositories.Price
             catch (Exception ex)
             {
                 return response.Falla($"Error al obtener precios: {ex}");
+                
             }
         }
     }

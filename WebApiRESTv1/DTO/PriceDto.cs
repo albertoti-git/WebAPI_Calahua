@@ -7,6 +7,6 @@ namespace WebApiRESTv1.DTO
         public string CardName { get; set; }
         public string ListNum { get; set; }
         public string ItemCode { get; set; }
-        public string Price { get; set; }
+        public double Price { get; set; }
     }
 }

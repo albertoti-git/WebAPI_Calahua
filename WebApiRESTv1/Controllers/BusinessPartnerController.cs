@@ -286,11 +286,26 @@ namespace WebApiRESTv1.Controllers
 					oSocios.PriceListNum = bp.PriceListNum;
 				}
 				oSocios.CreditLimit = bp.CreditLimit;
-				//oSocios.Currency = bp.Currency;
-				//oSocios.Phone1 = bp.Phone1;
-				//oSocios.Phone2 = bp.Phone2;
-				//oSocios.Cellular = bp.Cellular;
-				oSocios.EmailAddress = bp.EmailAddress;
+                // Determinar tipo de socio (CardType)
+                switch (bp.CompanyPrivate)
+                {
+                    case "Company":
+						oSocios.CompanyPrivate = BoCardCompanyTypes.cCompany;
+                        break;
+                    case "Private":
+                        oSocios.CompanyPrivate = BoCardCompanyTypes.cPrivate;
+                        break;
+                    case "Government":
+                        oSocios.CompanyPrivate = BoCardCompanyTypes.cGovernment;
+                        break;
+                    default:
+                        throw new Exception($"Tipo de socio no válido: {bp.CompanyPrivate} solo tipo Company, Private, Government");
+                }
+                //oSocios.Currency = bp.Currency;
+                //oSocios.Phone1 = bp.Phone1;
+                //oSocios.Phone2 = bp.Phone2;
+                //oSocios.Cellular = bp.Cellular;
+                oSocios.EmailAddress = bp.EmailAddress;
 				//oSocios.AdditionalID = bp.AdditionalID;
 				//oSocios.MailAddress = bp.MailAddress;
 				//oSocios.Address = bp.Address;
@@ -324,6 +339,60 @@ namespace WebApiRESTv1.Controllers
                     }
                 }
 
+				if (bp.ContactEmployees != null && bp.ContactEmployees.Count() > 0)
+				{
+                    for (int iIndex2 = 0; iIndex2 < oSocios.ContactEmployees.Count; iIndex2++)
+                    {
+                        if (iIndex2 > 0)
+                        {
+                            oSocios.ContactEmployees.Add();
+                        }
+                        Models.ContactEmployees contactEmployees = bp.ContactEmployees[iIndex2];
+
+                        oSocios.ContactEmployees.Name = contactEmployees.Name;
+                        oSocios.ContactEmployees.Position = contactEmployees.Position;
+                        oSocios.ContactEmployees.Address = contactEmployees.Address;
+                        oSocios.ContactEmployees.Phone1 = contactEmployees.Phone1;
+                        oSocios.ContactEmployees.Phone2 = contactEmployees.Phone2;
+                        oSocios.ContactEmployees.MobilePhone = contactEmployees.MobilePhone;
+                        oSocios.ContactEmployees.Fax = contactEmployees.Fax;
+                        oSocios.ContactEmployees.E_Mail = contactEmployees.E_Mail;
+                        oSocios.ContactEmployees.Pager = contactEmployees.Pager;
+                        oSocios.ContactEmployees.Remarks1 = contactEmployees.Remarks1;
+                        oSocios.ContactEmployees.Remarks2 = contactEmployees.Remarks2;
+                        oSocios.ContactEmployees.Password = contactEmployees.Password;
+
+                        // Nuevos campos disponibles en versiones recientes de SAP
+                        oSocios.ContactEmployees.Title = contactEmployees.Title;
+                        oSocios.ContactEmployees.FirstName = contactEmployees.FirstName;
+                        oSocios.ContactEmployees.MiddleName = contactEmployees.MiddleName;
+                        oSocios.ContactEmployees.LastName = contactEmployees.LastName;
+
+                        // Campos que son enums o especiales (hay que validar compatibilidad)
+                        if (contactEmployees.DateOfBirth != DateTime.MinValue)
+                            oSocios.ContactEmployees.DateOfBirth = contactEmployees.DateOfBirth;
+
+                        if (contactEmployees.Gender >= 0) // 0 = indefinido, 1 = masculino, 2 = femenino
+                            oSocios.ContactEmployees.Gender = (BoGenderTypes)contactEmployees.Gender;
+
+
+
+                        if (contactEmployees.UserFields != null && contactEmployees.UserFields.Length > 0)
+                        {
+                            foreach (var diccionario in contactEmployees.UserFields) // Recorres cada Dictionary<string,string>
+                            {
+                                if (diccionario != null)
+                                {
+                                    foreach (var kvp in diccionario) // kvp.Key y kvp.Value
+                                    {
+                                        oSocios.ContactEmployees.UserFields.Fields.Item(kvp.Key).Value = kvp.Value;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
 
                 if (bp.Addresses != null && bp.Addresses.Count() > 0)
 				{
@@ -389,11 +458,25 @@ namespace WebApiRESTv1.Controllers
 				oSocios.PriceListNum = bp.PriceListNum;
 			}
 			oSocios.CreditLimit = bp.CreditLimit;
-			//oSocios.Currency = bp.Currency;
-			//oSocios.Phone1 = bp.Phone1;
-			//oSocios.Phone2 = bp.Phone2;
-			//oSocios.Cellular = bp.Cellular;
-			oSocios.EmailAddress = bp.EmailAddress;
+            switch (bp.CompanyPrivate)
+            {
+                case "Company":
+                    oSocios.CompanyPrivate = BoCardCompanyTypes.cCompany;
+                    break;
+                case "Private":
+                    oSocios.CompanyPrivate = BoCardCompanyTypes.cPrivate;
+                    break;
+                case "Government":
+                    oSocios.CompanyPrivate = BoCardCompanyTypes.cGovernment;
+                    break;
+                default:
+                    throw new Exception($"Tipo de socio no válido: {bp.CompanyPrivate} solo tipo Company, Private, Government");
+            }
+            //oSocios.Currency = bp.Currency;
+            //oSocios.Phone1 = bp.Phone1;
+            //oSocios.Phone2 = bp.Phone2;
+            //oSocios.Cellular = bp.Cellular;
+            oSocios.EmailAddress = bp.EmailAddress;
 			//oSocios.AdditionalID = bp.AdditionalID;
 			//oSocios.MailAddress = bp.MailAddress;
 			//oSocios.Address = bp.Address;
@@ -423,6 +506,61 @@ namespace WebApiRESTv1.Controllers
                             oSocios.UserFields.Fields.Item(kvp.Key).Value = kvp.Value;
                         }
                     }
+                }
+            }
+
+            if (bp.ContactEmployees != null && bp.ContactEmployees.Count() > 0)
+            {
+                for (int iIndex2 = 0; iIndex2 < oSocios.ContactEmployees.Count; iIndex2++)
+                {
+                    if (iIndex2 > 0)
+                    {
+                        oSocios.ContactEmployees.Add();
+                    }
+                    Models.ContactEmployees contactEmployees = bp.ContactEmployees[iIndex2];
+
+                    oSocios.ContactEmployees.Name = contactEmployees.Name;
+                    oSocios.ContactEmployees.Position = contactEmployees.Position;
+                    oSocios.ContactEmployees.Address = contactEmployees.Address;
+                    oSocios.ContactEmployees.Phone1 = contactEmployees.Phone1;
+                    oSocios.ContactEmployees.Phone2 = contactEmployees.Phone2;
+                    oSocios.ContactEmployees.MobilePhone = contactEmployees.MobilePhone;
+                    oSocios.ContactEmployees.Fax = contactEmployees.Fax;
+                    oSocios.ContactEmployees.E_Mail = contactEmployees.E_Mail;
+                    oSocios.ContactEmployees.Pager = contactEmployees.Pager;
+                    oSocios.ContactEmployees.Remarks1 = contactEmployees.Remarks1;
+                    oSocios.ContactEmployees.Remarks2 = contactEmployees.Remarks2;
+                    oSocios.ContactEmployees.Password = contactEmployees.Password;
+
+                    // Nuevos campos disponibles en versiones recientes de SAP
+                    oSocios.ContactEmployees.Title = contactEmployees.Title;
+                    oSocios.ContactEmployees.FirstName = contactEmployees.FirstName;
+                    oSocios.ContactEmployees.MiddleName = contactEmployees.MiddleName;
+                    oSocios.ContactEmployees.LastName = contactEmployees.LastName;
+
+                    // Campos que son enums o especiales (hay que validar compatibilidad)
+                    if (contactEmployees.DateOfBirth != DateTime.MinValue)
+                        oSocios.ContactEmployees.DateOfBirth = contactEmployees.DateOfBirth;
+
+                    if (contactEmployees.Gender >= 0) // 0 = indefinido, 1 = masculino, 2 = femenino
+                        oSocios.ContactEmployees.Gender = (BoGenderTypes)contactEmployees.Gender;
+
+
+
+                    if (contactEmployees.UserFields != null && contactEmployees.UserFields.Length > 0)
+                    {
+                        foreach (var diccionario in contactEmployees.UserFields) // Recorres cada Dictionary<string,string>
+                        {
+                            if (diccionario != null)
+                            {
+                                foreach (var kvp in diccionario) // kvp.Key y kvp.Value
+                                {
+                                    oSocios.ContactEmployees.UserFields.Fields.Item(kvp.Key).Value = kvp.Value;
+                                }
+                            }
+                        }
+                    }
+
                 }
             }
 
@@ -484,16 +622,27 @@ namespace WebApiRESTv1.Controllers
 
         [HttpGet]
         [Route("BusinessPartner")]
-		public BusinessPartner Get_reponse(string CardCode)
-		{
+		public BusinessPartner Get_reponse(string CardCode = "", string Mail = "")
+        {
 			BusinessPartner businessPartner = new BusinessPartner();
 			try
 			{
-				ConexionSAP conexionSAP = ConexionSAP.GetInstance;
-				BusinessPartners oSocios = (BusinessPartners)(dynamic)conexionSAP.CompanySBO.GetBusinessObject(BoObjectTypes.oBusinessPartners);
-				Recordset recordset = (Recordset)(dynamic)conexionSAP.CompanySBO.GetBusinessObject(BoObjectTypes.BoRecordset);
-				recordset.DoQuery("SELECT  \"CardCode\" FROM OCRD WHERE \"CardCode\" = '" + CardCode + "'");
-				oSocios.Browser.Recordset = recordset;
+                ConexionSAP conexionSAP = ConexionSAP.GetInstance;
+                BusinessPartners oSocios = (BusinessPartners)(dynamic)conexionSAP.CompanySBO.GetBusinessObject(BoObjectTypes.oBusinessPartners);
+                Recordset recordset = (Recordset)(dynamic)conexionSAP.CompanySBO.GetBusinessObject(BoObjectTypes.BoRecordset);
+
+                string query = "SELECT T0.CardCode FROM OCRD T0  INNER JOIN OCPR T1 ON T0.CardCode = T1.CardCode WHERE 1=1 ";
+
+                if (!string.IsNullOrEmpty(CardCode))
+                {
+                    query += $" AND T0.CardCode = '{CardCode}'";
+                }
+                else if (!string.IsNullOrEmpty(Mail))
+                {
+                    query += $" AND (T0.E_Mail = '{Mail}' OR T1.E_MailL ='{Mail}' ) ";
+                }
+                recordset.DoQuery(query);
+                oSocios.Browser.Recordset = recordset;
 				while (!oSocios.Browser.EoF)
 				{
 					businessPartner.CardCode = oSocios.CardCode;
@@ -555,7 +704,49 @@ namespace WebApiRESTv1.Controllers
 						businessPartner.Addresses[iIndex2].StreetNo = oSocios.Addresses.StreetNo;
 						businessPartner.Addresses[iIndex2].GlobalLocationNumber = oSocios.Addresses.GlobalLocationNumber;
 					}
-					oSocios.Browser.MoveNext();
+
+
+                    businessPartner.ContactEmployees = new Models.ContactEmployees[oSocios.ContactEmployees.Count];
+                  
+                     for (int iIndex2 = 0; iIndex2 < oSocios.ContactEmployees.Count; iIndex2++)
+                        {
+                        oSocios.Addresses.SetCurrentLine(iIndex2);
+
+                        
+                        businessPartner.ContactEmployees[iIndex2] = new Models.ContactEmployees();
+                        businessPartner.ContactEmployees[iIndex2].Name = oSocios.ContactEmployees.Name;
+                        businessPartner.ContactEmployees[iIndex2].Position = oSocios.ContactEmployees.Position;
+                        businessPartner.ContactEmployees[iIndex2].Address = oSocios.ContactEmployees.Address;
+                        businessPartner.ContactEmployees[iIndex2].Phone1 = oSocios.ContactEmployees.Phone1;
+                        businessPartner.ContactEmployees[iIndex2].Phone2 = oSocios.ContactEmployees.Phone2;
+                        businessPartner.ContactEmployees[iIndex2].MobilePhone = oSocios.ContactEmployees.MobilePhone;
+                        businessPartner.ContactEmployees[iIndex2].Fax = oSocios.ContactEmployees.Fax;
+                        businessPartner.ContactEmployees[iIndex2].E_Mail = oSocios.ContactEmployees.E_Mail;
+                        businessPartner.ContactEmployees[iIndex2].Pager = oSocios.ContactEmployees.Pager;
+                        businessPartner.ContactEmployees[iIndex2].Remarks1 = oSocios.ContactEmployees.Remarks1;
+
+
+                        // Nuevos campos disponibles en versiones recientes de SAP
+                        businessPartner.ContactEmployees[iIndex2].Title = oSocios.ContactEmployees.Title;
+                        businessPartner.ContactEmployees[iIndex2].FirstName = oSocios.ContactEmployees.FirstName;
+                        businessPartner.ContactEmployees[iIndex2].MiddleName = oSocios.ContactEmployees.MiddleName;
+                        businessPartner.ContactEmployees[iIndex2].LastName = oSocios.ContactEmployees.LastName;
+
+                            // Campos que son enums o especiales (hay que validar compatibilidad)
+                            if (businessPartner.ContactEmployees[iIndex2].DateOfBirth != DateTime.MinValue)
+                            businessPartner.ContactEmployees[iIndex2].DateOfBirth = oSocios.ContactEmployees.DateOfBirth;
+
+                            //if (businessPartner.ContactEmployees[iIndex2].Gender >= 0) // 0 = indefinido, 1 = masculino, 2 = femenino
+                            //businessPartner.ContactEmployees[iIndex2].Gender = (BoGenderTypes)oSocios.ContactEmployees.Gender;
+
+
+
+                        
+
+                        }
+                    
+
+                    oSocios.Browser.MoveNext();
 				}
 			}
 			catch (Exception ex )
