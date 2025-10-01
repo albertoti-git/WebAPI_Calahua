@@ -40,7 +40,7 @@ namespace WebApiRESTv1.Repositories
                     oOrder.Comments = pedido.Comentarios;
                     oOrder.DocCurrency = pedido.Moneda;
                     oOrder.GroupNumber = pedido.FormaPago;
-                    oOrder.ShipToCode = pedido.Destino;
+                   // oOrder.ShipToCode = pedido.Destino;
                     oOrder.Series = pedido.Series;
                     oOrder.ContactPersonCode = pedido.CodigoContacto;
                     oOrder.DocRate = pedido.TipoCambio;

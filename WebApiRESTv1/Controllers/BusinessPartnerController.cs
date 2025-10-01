@@ -26,7 +26,7 @@ namespace WebApiRESTv1.Controllers
 		[HttpGet]
         [Route("BusinessPartners")]
 		//	public IHttpActionResult GetSocios(PageParameter pageParameter)
-		public IHttpActionResult GetSocios(int PageNumber, int PageSize)
+		public IHttpActionResult GetSocios(int PageNumber = 0, int PageSize = 0)
 		{
 			DataTable dt = new DataTable();
 			DataTable dtAdress = new DataTable();
@@ -710,9 +710,8 @@ namespace WebApiRESTv1.Controllers
                   
                      for (int iIndex2 = 0; iIndex2 < oSocios.ContactEmployees.Count; iIndex2++)
                         {
-                        oSocios.Addresses.SetCurrentLine(iIndex2);
-
-                        
+                        oSocios.ContactEmployees.SetCurrentLine(iIndex2);
+						                        
                         businessPartner.ContactEmployees[iIndex2] = new Models.ContactEmployees();
                         businessPartner.ContactEmployees[iIndex2].Name = oSocios.ContactEmployees.Name;
                         businessPartner.ContactEmployees[iIndex2].Position = oSocios.ContactEmployees.Position;
