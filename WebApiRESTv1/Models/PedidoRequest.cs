@@ -28,6 +28,14 @@ namespace WebApiRESTv1.Models
         public int CodigoContacto { get; set; }            // Series           nvarchar(254)
         public double TipoCambio { get; set; }            // Series           nvarchar(254)
 
+
+        public string RFC { get; set; }
+        public string UsoCFDI { get; set; }
+        public string MetodoPago { get; set; }
+        public string ShipDHL { get; set; }
+
+        public Dictionary<string, string>[] UserFields { get; set; }
+        public List<BPAddress> Addresses { get; set; } // Direcciones
     }
 
 
@@ -44,5 +52,8 @@ namespace WebApiRESTv1.Models
         public string IndicadorImpuestos { get; set; }    // TaxCode          nvarchar(8)
         public string Almacen { get; set; }               // WhsCode          nvarchar(8)
     }
+
+
+
 
 }
