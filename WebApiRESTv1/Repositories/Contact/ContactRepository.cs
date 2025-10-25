@@ -18,7 +18,7 @@ namespace WebApiRESTv1.Repositories
             _connectionString = ConfigurationManager.AppSettings["bdcon"];
         }
 
-        public async Task<Response<List<ContactDto>>> GetContactsAsync(string cardCode)
+        public async Task<Response<List<ContactDto>>> GetContactsAsync(string cardCode, string Mail)
         {
             var response = new Response<List<ContactDto>>();
             var contacts = new List<ContactDto>();
@@ -32,7 +32,7 @@ namespace WebApiRESTv1.Repositories
                     command.Parameters.Add("@Opc", SqlDbType.Int).Value = 7; // Opción para contactos
                     command.Parameters.Add("@StrVale1", SqlDbType.NVarChar).Value = string.Empty;
                     command.Parameters.Add("@StrVale2", SqlDbType.NVarChar).Value = cardCode ?? "";
-                    command.Parameters.Add("@StrVale3", SqlDbType.NVarChar).Value = string.Empty;
+                    command.Parameters.Add("@StrVale3", SqlDbType.NVarChar).Value = Mail ?? "";
 
                     await connection.OpenAsync();
 

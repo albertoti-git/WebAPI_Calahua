@@ -53,10 +53,10 @@
     <Reference Include="Autofac.Integration.WebApi, Version=6.1.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>packages\Autofac.WebApi2.6.1.1\lib\net472\Autofac.Integration.WebApi.dll</HintPath>
     </Reference>
-    <Reference Include="Interop.SAPbobsCOM, Version=10.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+    <Reference Include="Interop.SAPbobsCOM, Version=9.0.0.0, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
-      <HintPath>..\..\..\V9\Interop.SAPbobsCOM.dll</HintPath>
+      <HintPath>bin\Interop.SAPbobsCOM.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNetCore.JsonPatch, Version=6.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNetCore.JsonPatch.6.0.2\lib\net461\Microsoft.AspNetCore.JsonPatch.dll</HintPath>
@@ -248,6 +248,7 @@
     <Compile Include="Controllers\ItemGroupController.cs" />
     <Compile Include="Controllers\ItemsController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\PaymentsController.cs" />
     <Compile Include="Controllers\PriceController.cs" />
     <Compile Include="Controllers\QuotationController.cs" />
     <Compile Include="Controllers\TokenGenerator.cs" />
@@ -267,6 +268,7 @@
     <Compile Include="Models\BusinessPartner.cs" />
     <Compile Include="Models\ConexionSAP.cs" />
     <Compile Include="Models\ContactEmployees.cs" />
+    <Compile Include="Models\IncPayments.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\ItemGroup.cs" />
     <Compile Include="Models\Line.cs" />
@@ -344,10 +346,12 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Repositories\BusinessPartner\" />
     <Folder Include="Views\Contact\" />
     <Folder Include="Views\Invoice\" />
     <Folder Include="Views\Items\" />
     <Folder Include="Views\Order\" />
+    <Folder Include="Views\Payments\" />
     <Folder Include="Views\Price\" />
   </ItemGroup>
   <ItemGroup>

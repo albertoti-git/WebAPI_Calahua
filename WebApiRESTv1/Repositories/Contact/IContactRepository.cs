@@ -10,7 +10,6 @@ namespace WebApiRESTv1.Repositories
 {
     public interface IContactRepository
     {
-        Task<Response<List<ContactDto>>> GetContactsAsync(string cardCode);
-
+       Task<Response<List<ContactDto>>> GetContactsAsync(string cardCode, string Mail);
     }
 }

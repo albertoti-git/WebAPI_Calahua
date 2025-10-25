@@ -19,7 +19,7 @@ namespace WebApiRESTv1.Controllers
         string strConection = ConfigurationManager.AppSettings.Get("bdcon");
         [Route("GetItemsPage")]
         //  public IHttpActionResult GetItemPage(PageParameter pageParameter)
-        public IHttpActionResult GetItemPage(int PageNumber, int PageSize)
+        public IHttpActionResult GetItemPage(int PageNumber = 0, int PageSize = 0, string ItemCode="", string CardCode = "", string U_ItemCodeEC="")
         {
             DataTable dt = new DataTable();
             Item oItm = new Item();
@@ -29,7 +29,7 @@ namespace WebApiRESTv1.Controllers
             iSkip = (PageNumber - 1) * PageSize;
             using (SqlConnection connection = new SqlConnection(strConection))
             {
-                String sql = string.Format("Sp_AYB_WebAPI {0}, '{1}', '{2}', '{3}'", 1, "", iSkip, PageSize);
+                String sql = string.Format("Sp_AYB_WebAPI {0}, '{1}', '{2}', '{3}', '{4}', '{5}'", 1, ItemCode, iSkip, PageSize, CardCode, U_ItemCodeEC);
                 SqlCommand cmd = new SqlCommand();
                 SqlDataAdapter sqlDA;
                 connection.Open();

@@ -19,7 +19,7 @@ namespace WebApiRESTv1.Models
         public string Remarks2 { get; set; }
         public string Password { get; set; }
         public string Name { get; set; }
-        public UserFields UserFields { get; set; }
+        public Dictionary<string, string>[] UserFields { get; set; }
         public int InternalCode { get; set; }
         public string PlaceOfBirth { get; set; }
         public DateTime DateOfBirth { get; set; }
