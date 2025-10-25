@@ -31,20 +31,9 @@ namespace WebApiRESTv1.Repositories
                 try
                 {
                     Documents oOrder = (Documents)_company.GetBusinessObject(documentCode);
-
-                    if (oOrder == null)
-                    {
-                        resultados.Add(new
-                        {
-                            pedido = pedido.OcReferencia,
-                            estado = "Error",
-                            mensaje = "No se pudo crear el objeto de documento en SAP."
-                        });
-                        tieneErrores = true;
-                        continue; // Saltar al siguiente pedido
-                    }   
+ 
                     // Cabecera
-                    oOrder.CardCode = pedido.Cliente;
+                    oOrder.CardCode = pedido.Cliente;   
                     oOrder.CardName = pedido.Nombre;
                     oOrder.DocDate = pedido.Fecha;
                     oOrder.DocDueDate = pedido.FechaEntrega;
@@ -56,12 +45,13 @@ namespace WebApiRESTv1.Repositories
                     oOrder.Series = pedido.Series;
                     oOrder.ContactPersonCode = pedido.CodigoContacto;
                     oOrder.DocRate = pedido.TipoCambio;
+                    oOrder.PaymentMethod = pedido.MetodoPago;
                     try
                     {
                         oOrder.FederalTaxID = pedido.RFC;
                         oOrder.UserFields.Fields.Item("U_U_DHL_ShipTo").Value = pedido.ShipDHL;
                         oOrder.UserFields.Fields.Item("U_B1SYS_MainUsage").Value = pedido.UsoCFDI;
-                        oOrder.UserFields.Fields.Item("U_U_MPAGO").Value = pedido.MetodoPago;
+                        //oOrder.UserFields.Fields.Item("U_U_MPAGO").Value = pedido.MetodoPago;
                     }
                     catch (Exception ex)
                     {
@@ -71,19 +61,19 @@ namespace WebApiRESTv1.Repositories
                     }
 
 
-                    //if (pedido.UserFields != null && pedido.UserFields.Length > 0)
-                    //{
-                    //    foreach (var diccionario in pedido.UserFields) // Recorres cada Dictionary<string,string>
-                    //    {
-                    //        if (diccionario != null)
-                    //        {
-                    //            foreach (var kvp in diccionario) // kvp.Key y kvp.Value
-                    //            {
-                    //                oOrder.UserFields.Fields.Item(kvp.Key).Value = kvp.Value;
-                    //            }
-                    //        }
-                    //    }
-                    //}
+                    if (pedido.UserFields != null && pedido.UserFields.Length > 0)
+                    {
+                        foreach (var diccionario in pedido.UserFields) // Recorres cada Dictionary<string,string>
+                        {
+                            if (diccionario != null)
+                            {
+                                foreach (var kvp in diccionario) // kvp.Key y kvp.Value
+                                {
+                                    oOrder.UserFields.Fields.Item(kvp.Key).Value = kvp.Value;
+                                }
+                            }
+                        }
+                    }
 
                     try
                     {
@@ -91,7 +81,7 @@ namespace WebApiRESTv1.Repositories
                         {
                             for (int iIndex3 = 0; iIndex3 < pedido.Addresses.Count; iIndex3++)
                             {
-                                if (iIndex3 > 0)
+                                if (pedido.Addresses.Count > 0)
                                 {
 
                                     BPAddress oDir = pedido.Addresses[iIndex3];
@@ -183,11 +173,15 @@ namespace WebApiRESTv1.Repositories
                     else
                     {
                         string docEntry = _company.GetNewObjectKey();
+                        string docNum = "";
+                        oOrder.GetByKey(Convert.ToInt32(docEntry));
+                        docNum = oOrder.DocNum.ToString();
                         resultados.Add(new
                         {
                             pedido = pedido.OcReferencia,
                             estado = "OK",
-                            docEntry = docEntry
+                            docEntry = docEntry,
+                            docNum = docNum
                         });
                     }
                 }
